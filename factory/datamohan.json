@@ -1,0 +1,14 @@
+{
+	"name": "datamohan",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "false"
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "48fdc727-4080-4f54-9620-faffce7fac1a",
+		"tenantId": "ac54a3e5-4101-4db5-b498-8430a8e28229"
+	}
+}
