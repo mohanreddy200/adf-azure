@@ -1,0 +1,9 @@
+{
+	"name": "mohan-adf-1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f0063ada-b3f1-441a-87f0-0120831b0440",
+		"tenantId": "ac54a3e5-4101-4db5-b498-8430a8e28229"
+	}
+}
