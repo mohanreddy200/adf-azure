@@ -5,17 +5,8 @@
 		"workspaceName": {
 			"value": "rojectsynapse"
 		},
-		"AzureBlobStorage1_connectionString": {
-			"value": ""
-		},
-		"AzureDataLakeStorage1_accountKey": {
-			"value": ""
-		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
-		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"value": "https://mohan124.dfs.core.windows.net/"
 		}
 	}
 }
