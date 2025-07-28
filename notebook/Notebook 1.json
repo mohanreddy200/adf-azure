@@ -1,0 +1,81 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "mohanpool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "f3c1db3e-1e89-4fa0-8d9d-fc6c263ec096"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/275af607-f60b-4315-a830-c65b5c182dd0/resourceGroups/synapse-project-1234567890/providers/Microsoft.Synapse/workspaces/rojectsynapse/bigDataPools/mohanpool",
+				"name": "mohanpool",
+				"type": "Spark",
+				"endpoint": "https://rojectsynapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/mohanpool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.4",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"from pyspark.sql.functions import *"
+				],
+				"execution_count": 67
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"spark.conf.set(\"fs.azure.sas.raw.synap.blob.core.windows.net\",\"sp=racwdym&st=2025-07-28T02:01:04Z&se=2025-07-28T10:16:04Z&sv=2024-11-04&sr=b&sig=4LOFYv6xdMDQoQ0W32bFVA92LnD6U68wmr3N3teIMNo%3D\")"
+				],
+				"execution_count": 74
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"mssparkutils.fs.ls(\"wasbs://raw@synap.blob.core.windows.net\")"
+				],
+				"execution_count": 75
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"display(spark.read.csv(\"wasbs://raw@synap.blob.core.windows.net/\"))"
+				],
+				"execution_count": 79
+			}
+		]
+	}
+}
